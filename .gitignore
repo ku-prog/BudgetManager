@@ -36,3 +36,5 @@
 /obj
 /plan
 BudgetManager.*
+*.cbp
+BudgetManager.cbp
