@@ -3,6 +3,7 @@
 #include <sstream>
 
 #include "Markup.h"
+#include "Type.h"
 
 using namespace std;
 
@@ -25,9 +26,14 @@ int getInteger()
     return inputInteger;
 }
 
+string getString()
+{
+    string input = "";
+    getline(cin, input);
+    return input;
+}
 
-
-int main()
+int showMainMenu()
 {
     int choiceFromMainMenu;
 
@@ -49,11 +55,13 @@ int main()
         case 1:
             cout << "Proceeding to logging in. Current progress 0%." << endl;
             system("pause");
+            return choiceFromMainMenu;
             break;
 
         case 2:
             cout << "Proceeding to register form. Current progress 0%." << endl;
             system("pause");
+            return choiceFromMainMenu;
             break;
 
         case 3:
@@ -66,6 +74,29 @@ int main()
             cout << "Please insert proper character." << endl;
             system("pause");
         }
+    }
+}
+
+int userLogin()
+{
+    string login, password;
+
+    login = getString();
+
+
+}
+
+
+
+int main()
+{
+    int initialChoice = showMainMenu();
+    enum Type type = initialChoice;
+
+    if (type == LOGIN)
+    {
+        cout << "Logging in..." << endl;
+        Login();
     }
 
     return 0;

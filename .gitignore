@@ -35,6 +35,7 @@
 /bin
 /obj
 /plan
+/doxygen
 BudgetManager.*
 *.cbp
 BudgetManager.cbp
